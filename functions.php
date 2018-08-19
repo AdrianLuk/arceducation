@@ -82,26 +82,26 @@ class cpt_register {
 
     public function cpt_register($cpt, $cpt_name, $icon = 'dashicons-businessman', $supports = array()){
         $labels = array(
-            'name'               => _x( $cpt . 's', $cpt . 's', 'Schoolhouse' ),
-            'singular_name'      => _x( $cpt, $cpt, 'Schoolhouse' ),
-            'menu_name'          => _x( $cpt . 's', 'admin menu', 'Schoolhouse' ),
-            'name_admin_bar'     => _x( $cpt, 'add new on admin bar', 'Schoolhouse' ),
-            'add_new'            => _x( 'Add New', $cpt, 'Schoolhouse' ),
-            'add_new_item'       => __( 'Add New ' . $cpt, 'Schoolhouse' ),
-            'new_item'           => __( 'New '. $cpt, 'Schoolhouse' ),
-            'edit_item'          => __( 'Edit '.$cpt, 'Schoolhouse' ),
-            'view_item'          => __( 'View '.$cpt, 'Schoolhouse' ),
-            'all_items'          => __( 'All ' . $cpt . 's', 'Schoolhouse' ),
-            'search_items'       => __( 'Search ' .$cpt . 's', 'Schoolhouse' ),
-            'parent_item_colon'  => __( 'Parent ' .$cpt . 's:', 'Schoolhouse' ),
-            'not_found'          => __( 'No ' .$cpt . 's found.', 'Schoolhouse' ),
-            'not_found_in_trash' => __( 'No ' .$cpt . 's found in Trash.', 'Provisus' )
+            'name'               => _x( $cpt . 's', $cpt . 's', 'Arc' ),
+            'singular_name'      => _x( $cpt, $cpt, 'Arc' ),
+            'menu_name'          => _x( $cpt . 's', 'admin menu', 'Arc' ),
+            'name_admin_bar'     => _x( $cpt, 'add new on admin bar', 'Arc' ),
+            'add_new'            => _x( 'Add New', $cpt, 'Arc' ),
+            'add_new_item'       => __( 'Add New ' . $cpt, 'Arc' ),
+            'new_item'           => __( 'New '. $cpt, 'Arc' ),
+            'edit_item'          => __( 'Edit '.$cpt, 'Arc' ),
+            'view_item'          => __( 'View '.$cpt, 'Arc' ),
+            'all_items'          => __( 'All ' . $cpt . 's', 'Arc' ),
+            'search_items'       => __( 'Search ' .$cpt . 's', 'Arc' ),
+            'parent_item_colon'  => __( 'Parent ' .$cpt . 's:', 'Arc' ),
+            'not_found'          => __( 'No ' .$cpt . 's found.', 'Arc' ),
+            'not_found_in_trash' => __( 'No ' .$cpt . 's found in Trash.', 'Arc' )
         );
 
         $args = array(
             'labels'              => $labels,
             'hierarchical'        => false,
-            'description'         => __( 'You can add '.$cpt.' here!.', 'Provisus' ),
+            'description'         => __( 'You can add '.$cpt.' here!.', 'Arc' ),
             'taxonomies'          => array(),
             'public'              => true,
             'show_ui'             => true,
@@ -116,7 +116,7 @@ class cpt_register {
             'query_var'           => true,
             'can_export'          => true,
             'rewrite'             => true,
-            'capability_type'     => 'post',
+            'capability_type'     => 'page',
             'supports'            => $supports 
         );
         register_post_type($cpt_name,$args);
