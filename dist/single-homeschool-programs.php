@@ -39,9 +39,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
                 <div class="homeschool container my-5">
                     <div class="homeschool-row row">
                         <div class="homeschool-left col-12 col-md-3">
-                            <div class="h-100 homeschool-left-inner">
+                            <div class="h-100 homeschool-left-inner d-flex flex-column justify-content-between">
                                 <img class="homeschool-left-img img-fluid" src="<?= $homeschool_picture; ?>" alt="<?php the_title(); echo " " . "picture" ?>">
-                                <a href="<?= $homeschool_registration_link; ?>" class="homeschool-left-register-link btn btn-primary">Register Now</a>
+                                <a href="<?= $homeschool_registration_link; ?>" class="homeschool-left-register-link btn btn-primary text-uppercase text-white">Register Now</a>
                             </div>
                         </div>
                         <div class="homeschool-right col-12 col-md-9">
