@@ -3,25 +3,6 @@
     "title": "Homeschool Programs",
     "fields": [
         {
-            "key": "field_5b7785b29aa35",
-            "label": "Homeschool Title",
-            "name": "homeschool_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5b7785fd9aa36",
             "label": "Homeschool Picture",
             "name": "homeschool_picture",
@@ -46,10 +27,10 @@
             "mime_types": ""
         },
         {
-            "key": "field_5b77863d9aa37",
-            "label": "Homeschool Description",
-            "name": "homeschool_description",
-            "type": "textarea",
+            "key": "field_5b7787ac49d00",
+            "label": "Homeschool Registration Link",
+            "name": "homeschool_registration_link",
+            "type": "url",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -59,10 +40,7 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 6,
-            "new_lines": ""
+            "placeholder": ""
         },
         {
             "key": "field_5b77865f9aa38",
@@ -103,6 +81,44 @@
             "maxlength": ""
         },
         {
+            "key": "field_5b80467a879f6",
+            "label": "Homeschool Program Fee",
+            "name": "homeschool_program_fee",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b804688879f7",
+            "label": "Homeschool Material Fee",
+            "name": "homeschool_material_fee",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5b77876349cff",
             "label": "Homeschool Price",
             "name": "homeschool_price",
@@ -122,10 +138,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_5b7787ac49d00",
-            "label": "Homeschool Registration Link",
-            "name": "homeschool_registration_link",
-            "type": "url",
+            "key": "field_5b77863d9aa37",
+            "label": "Homeschool Description",
+            "name": "homeschool_description",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -135,7 +151,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -143,7 +162,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "homeschool"
+                "value": "homeschool-programs"
             }
         ]
     ],
@@ -155,5 +174,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1534716143
+    "modified": 1535135692
 }

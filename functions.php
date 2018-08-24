@@ -74,9 +74,9 @@ add_action( 'init', function(){
 } );
 class cpt_register {
     public function __construct(){
-        $this->cpt_register('Homeschool Program', 'homeschool', 'dashicons-admin-home', array());
-        $this->cpt_register('Camp', 'camp', 'dashicons-palmtree', array());
-        $this->cpt_register('Classe', 'class', 'dashicons-welcome-learn-more', array());
+        $this->cpt_register('Homeschool Program', 'homeschool-programs', 'dashicons-admin-home', array());
+        $this->cpt_register('Camp', 'camps', 'dashicons-palmtree', array());
+        $this->cpt_register('Classe', 'classes', 'dashicons-welcome-learn-more', array());
 		$this->cpt_register('Staff', 'staff', 'dashicons-groups', array());
     }
 
@@ -97,6 +97,7 @@ class cpt_register {
             'not_found'          => __( 'No ' .$cpt . 's found.', 'Arc' ),
             'not_found_in_trash' => __( 'No ' .$cpt . 's found in Trash.', 'Arc' )
         );
+        $supports = array('title', 'editor', 'thumbnail','revisions');
 
         $args = array(
             'labels'              => $labels,
@@ -116,7 +117,7 @@ class cpt_register {
             'query_var'           => true,
             'can_export'          => true,
             'rewrite'             => true,
-            'capability_type'     => 'page',
+            'capability_type'     => 'post',
             'supports'            => $supports 
         );
         register_post_type($cpt_name,$args);
