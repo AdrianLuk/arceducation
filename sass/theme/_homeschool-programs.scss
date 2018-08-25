@@ -38,10 +38,9 @@
             -ms-flex-pack: justify;
             justify-content: space-between;
         }
-        &-register-link {
-            color: $white;
-            text-transform: uppercase;
-        }
+        // &-register-link {
+        //     @include registration-button;
+        // }
     }
 }
 

@@ -1,0 +1,7 @@
+@mixin registration-button {
+    color: $white;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: $primary;
+    border-color: $primary;
+}
