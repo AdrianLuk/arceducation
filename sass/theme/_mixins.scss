@@ -5,3 +5,7 @@
     background-color: $primary;
     border-color: $primary;
 }
+@mixin title {
+    font-weight: bold;
+    text-transform: uppercase;
+}

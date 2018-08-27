@@ -6,7 +6,53 @@
     get_header();
 
 ?>
+<div class="wrapper p-0" id="single-wrapper">
 
+	<div id="content" tabindex="-1">
+
+        <main class="site-main" id="main">
+            <?php if(have_rows('home_hero_section')) : ?>
+            <?php while(have_rows('home_hero_section')): the_row(); 
+                $hero_title = get_sub_field('hero_title') ? get_sub_field('hero_title') : '';
+                $hero_subheading = get_sub_field('hero_subheading') ? get_sub_field('hero_subheading') : '';
+                $hero_cta_button = get_sub_field('hero_cta_button') ? get_sub_field('hero_cta_button') : '';
+            ?>
+                <div id="homepage-top-banner" class="p-0 section hero-section bg-position bg-top-center">
+                    <?php if (have_rows('hero_slider')) : ?>
+                    <div class="homepage-swiper swiper-container">
+                        <div class="swiper-wrapper">
+                            <?php while(have_rows('hero_slider')): the_row(); 
+                                $hero_slide_image = get_sub_field('hero_slide_image') ? get_sub_field('hero_slide_image') : '';
+                            ?>
+                            <div class="swiper-slide" style="background-image: url('<?= $hero_slide_image; ?>');"></div>
+                            <?php endwhile; ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                <div class="overlay"></div>
+                    <div class="container">
+                        <div class="text-white home-banner-inner text-center">
+                            <h1><?= $hero_title; ?></h1>
+                            <h2><?= $hero_subheading; ?></h2>
+                            <a href="<?= $hero_cta_button['url']; ?>" class="btn btn-primary btn-lg hero-cta"><?= $hero_cta_button['title']; ?></a>
+                        </div>
+                    </div>
+                </div>
+                <?php endwhile; ?>
+            <?php endif;?>
+            <?php if(have_rows('home_offerings_section')): ?>
+                <?php while(have_rows('home_offerings_section')) : the_row(); ?>
+                    <?php 
+                        $section_name = get_sub_field('section_name') ? get_sub_field('section_name') : '';
+                        $section_description = get_sub_field('section_description') ? get_sub_field('section_description') : '';
+                        $section_background = get_sub_field('section_background') ? get_sub_field('section_background') : '';
+                    ?>
+                    
+                <?php endwhile ; ?>
+            <?php endif ; ?>
+        </main>
+    </div>
+</div>
     <?php
 
     get_footer();

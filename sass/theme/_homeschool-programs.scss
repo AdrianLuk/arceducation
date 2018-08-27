@@ -1,25 +1,3 @@
-#homeschool-top-banner {
-    height: 550px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.5);
-    }
-    .container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
-}
 .total-price {
     color: darken($primary, 30%) !important;
     font-size: 1.5rem;
@@ -42,11 +20,10 @@
         //     @include registration-button;
         // }
     }
-}
-
-.homeschool-table {
-    width: 100%;
-    @media screen and (min-width: 768px) {
-        max-width: 50%;
+    &-table {
+        width: 100%;
+        @media screen and (min-width: 768px) {
+            max-width: 50%;
+        }
     }
 }

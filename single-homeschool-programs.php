@@ -13,7 +13,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 	<div class="<?php //echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-
 			<main class="site-main" id="main">
                 
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -28,11 +27,11 @@ $container   = get_theme_mod( 'understrap_container_type' );
                     $homeschool_registration_link = get_field('homeschool_registration_link') ? get_field('homeschool_registration_link') : ''; 
                     
                     ?>
-                <div id="homeschool-top-banner" class="p-0 section top-section bg-position bg-top-center " style="background-image: url(<?php the_post_thumbnail_url('full'); ?>)">
+                <div id="homeschool-top-banner" class="p-0 section hero-section bg-position bg-top-center">
                 <div class="overlay"></div>
                     <div class="container">
                         <div class="text-white home-banner-inner text-center">
-                            <h1 class="display-2 font-weight-bold"><?php the_title(); ?></h1>
+                            <h1 class="font-weight-bold"><?php the_title(); ?></h1>
                         </div>
                     </div>
                 </div>

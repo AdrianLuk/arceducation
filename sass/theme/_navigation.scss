@@ -1,0 +1,9 @@
+#main-menu {
+    .nav-link {
+        color: rgba(255, 255, 255, 1) !important;
+        text-transform: uppercase;
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+}
