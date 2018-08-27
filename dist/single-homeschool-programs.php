@@ -13,7 +13,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 	<div class="<?php //echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-
 			<main class="site-main" id="main">
                 
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -28,20 +27,20 @@ $container   = get_theme_mod( 'understrap_container_type' );
                     $homeschool_registration_link = get_field('homeschool_registration_link') ? get_field('homeschool_registration_link') : ''; 
                     
                     ?>
-                <div id="homeschool-top-banner" class="p-0 section top-section bg-position bg-top-center " style="background-image: url(<?php the_post_thumbnail_url('full'); ?>)">
+                <div id="homeschool-top-banner" class="p-0 section hero-section bg-position bg-top-center">
                 <div class="overlay"></div>
                     <div class="container">
                         <div class="text-white home-banner-inner text-center">
-                            <h1 class="display-2 font-weight-bold"><?php the_title(); ?></h1>
+                            <h1 class="font-weight-bold"><?php the_title(); ?></h1>
                         </div>
                     </div>
                 </div>
                 <div class="homeschool container my-5">
                     <div class="homeschool-row row">
                         <div class="homeschool-left col-12 col-md-3">
-                            <div class="h-100 homeschool-left-inner d-flex flex-column justify-content-between">
+                            <div class="h-100 homeschool-left-inner">
                                 <img class="homeschool-left-img img-fluid" src="<?= $homeschool_picture; ?>" alt="<?php the_title(); echo " " . "picture" ?>">
-                                <a href="<?= $homeschool_registration_link; ?>" class="homeschool-left-register-link btn btn-primary text-uppercase text-white">Register Now</a>
+                                <a href="<?= $homeschool_registration_link; ?>" class="homeschool-left-register-link btn-register btn btn-primary">Register Now</a>
                             </div>
                         </div>
                         <div class="homeschool-right col-12 col-md-9">
