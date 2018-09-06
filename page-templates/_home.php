@@ -46,8 +46,17 @@
                         $section_name = get_sub_field('section_name') ? get_sub_field('section_name') : '';
                         $section_description = get_sub_field('section_description') ? get_sub_field('section_description') : '';
                         $section_background = get_sub_field('section_background') ? get_sub_field('section_background') : '';
+                        $section_cta = get_sub_field('section_cta') ? get_sub_field('section_cta') : '';
                     ?>
-                    
+                    <section style="background-image:url('<?= $section_background; ?>');" class="offerings" id="Home-offerings">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="text-white offerings-banner-inner text-center">
+                            <h2 class="offerings-title"><?= $section_name; ?></h2>
+                            <p class="lead"><?= $section_description; ?></p>
+                        </div>
+                    </div>
+                    </section>
                 <?php endwhile ; ?>
             <?php endif ; ?>
         </main>

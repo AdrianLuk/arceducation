@@ -1,6 +1,7 @@
-.total-price {
+.total-price, .age-group {
     color: darken($primary, 30%) !important;
     font-size: 1.5rem;
+    vertical-align: middle;
 }
 .homeschool {
     &-left {
@@ -12,9 +13,6 @@
             -webkit-box-direction: normal;
             -ms-flex-direction: column;
             flex-direction: column;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
         }
         // &-register-link {
         //     @include registration-button;
@@ -23,7 +21,10 @@
     &-table {
         width: 100%;
         @media screen and (min-width: 768px) {
-            max-width: 50%;
+            max-width: 75%;
+        }
+        @media screen and (min-width: 1200px){
+            max-width: 40%;
         }
     }
 }

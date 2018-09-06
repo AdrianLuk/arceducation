@@ -27,7 +27,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
                     $homeschool_registration_link = get_field('homeschool_registration_link') ? get_field('homeschool_registration_link') : ''; 
                     
                     ?>
-                <div id="homeschool-top-banner" class="p-0 section hero-section bg-position bg-top-center">
+                <div id="homeschool-top-banner" class="p-0 section hero-section bg-position bg-top-center " style="background-image: url(<?php the_post_thumbnail_url('full'); ?>)">
                 <div class="overlay"></div>
                     <div class="container">
                         <div class="text-white home-banner-inner text-center">
@@ -40,7 +40,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
                         <div class="homeschool-left col-12 col-md-3">
                             <div class="h-100 homeschool-left-inner">
                                 <img class="homeschool-left-img img-fluid" src="<?= $homeschool_picture; ?>" alt="<?php the_title(); echo " " . "picture" ?>">
-                                <a href="<?= $homeschool_registration_link; ?>" class="homeschool-left-register-link btn-register btn btn-primary">Register Now</a>
+                                <a href="<?= $homeschool_registration_link; ?>" class="mt-3 homeschool-left-register-link btn-register btn btn-primary">Register Now</a>
                             </div>
                         </div>
                         <div class="homeschool-right col-12 col-md-9">
@@ -52,7 +52,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
                                     <p><?= $homeschool_date; ?></p>
                                     </div>
                                 </div>
-                                <table class="homeschool-table table table-responsive mx-auto">
+                                <table class="text-center homeschool-table table-sm table table-responsive mx-auto">
                                     <thead>
                                         <tr>
                                             <th style="vertical-align: middle;">Age Group</th>
@@ -63,10 +63,10 @@ $container   = get_theme_mod( 'understrap_container_type' );
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><?= $homeschool_age ?></td>
-                                            <td>$<?= $homeschool_program_fee; ?></td>
-                                            <td>$<?= $homeschool_material_fee; ?></td>
-                                            <th class="total-price" scope="row">$<?= $homeschool_price; ?></th>
+                                            <th style="vertical-align: middle" class="age-group"><?= $homeschool_age ?></th>
+                                            <td style="vertical-align: middle">$<?= $homeschool_program_fee; ?></td>
+                                            <td style="vertical-align: middle">$<?= $homeschool_material_fee; ?></td>
+                                            <th style="vertical-align: middle;" class="total-price" scope="row">$<?= $homeschool_price; ?></th>
                                         </tr>
                                     </tbody>
                                 </table>

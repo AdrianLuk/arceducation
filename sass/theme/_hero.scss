@@ -18,7 +18,7 @@
         left: 0;
         height: 100%;
         width: 100%;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.1);
     }
     .container {
         z-index: 2;
@@ -27,6 +27,7 @@
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+        text-shadow: 1px 1px 5px #000;
         h1 {
             @include title;
             font-size: 2.5rem;
