@@ -17,7 +17,7 @@
                 $hero_subheading = get_sub_field('hero_subheading') ? get_sub_field('hero_subheading') : '';
                 $hero_cta_button = get_sub_field('hero_cta_button') ? get_sub_field('hero_cta_button') : '';
             ?>
-                <div id="homepage-top-banner" class="p-0 section hero-section bg-position bg-top-center">
+                <div id="homepage-top-banner" class="p-0 section home-hero-section hero-section bg-position bg-top-center">
                     <?php if (have_rows('hero_slider')) : ?>
                     <div class="homepage-swiper swiper-container">
                         <div class="swiper-wrapper">
@@ -34,7 +34,7 @@
                         <div class="text-white home-banner-inner text-center">
                             <h1><?= $hero_title; ?></h1>
                             <h2><?= $hero_subheading; ?></h2>
-                            <a href="<?= $hero_cta_button['url']; ?>" class="btn btn-primary btn-lg hero-cta"><?= $hero_cta_button['title']; ?></a>
+                            <a href="<?= $hero_cta_button['url']; ?>" class="btn btn-primary btn-lg hero-cta cta"><?= $hero_cta_button['title']; ?></a>
                         </div>
                     </div>
                 </div>
@@ -50,12 +50,15 @@
                     ?>
                     <section style="background-image:url('<?= $section_background; ?>');" class="offerings" id="Home-offerings">
                     <div class="overlay"></div>
-                    <div class="container">
+                    
                         <div class="text-white offerings-banner-inner text-center">
                             <h2 class="offerings-title"><?= $section_name; ?></h2>
-                            <p class="lead"><?= $section_description; ?></p>
+                            <p class=" p-3"><?= $section_description; ?></p>
+                            <?php if($section_cta): ?>
+                            <a href="<?= $section_cta['url']; ?>" class="cta btn btn-primary"><?= $section_cta['title']; ?></a>
+                            <?php endif ?>
                         </div>
-                    </div>
+                   
                     </section>
                 <?php endwhile ; ?>
             <?php endif ; ?>

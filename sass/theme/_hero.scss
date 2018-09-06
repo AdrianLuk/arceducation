@@ -5,12 +5,15 @@
     background-position: center;
     background-attachment: fixed;
     position: relative;
+
     @media screen and (min-width: 768px) {
         height: 400px;
     }
+
     @media screen and (min-width: 1200px) {
         height: 600px;
     }
+
     .overlay {
         z-index: 2;
         position: absolute;
@@ -18,8 +21,9 @@
         left: 0;
         height: 100%;
         width: 100%;
-        background: rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.2);
     }
+
     .container {
         z-index: 2;
         position: absolute;
@@ -28,20 +32,39 @@
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         text-shadow: 1px 1px 5px #000;
+
         h1 {
             @include title;
             font-size: 2.5rem;
             margin: 2rem 0;
+
             @media screen and (min-width: 768px) {
                 font-size: 3rem;
             }
         }
+
         h2 {
             @include title;
             margin-bottom: 2rem;
         }
+
         .hero-cta {
             color: $white;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
+    }
+}
+
+.home-hero-section {
+    height: 450px;
+
+    @media screen and (min-width: 768px) {
+        height: 600px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        height: 800px;
     }
 }
