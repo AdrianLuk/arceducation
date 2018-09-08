@@ -13,17 +13,6 @@
     @media screen and (min-width: 1200px) {
         height: 600px;
     }
-
-    .overlay {
-        z-index: 2;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.2);
-    }
-
     .container {
         z-index: 2;
         position: absolute;
@@ -47,12 +36,8 @@
             @include title;
             margin-bottom: 2rem;
         }
-
         .hero-cta {
             color: $white;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 1px;
         }
     }
 }

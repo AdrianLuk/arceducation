@@ -50,7 +50,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
                     </div>
                 </div>
                 <div class="container">
-						<?php understrap_post_nav(); ?>
+						<?php arc_post_nav(); ?>
                 </div>
 				<?php endwhile; // end of the loop. ?>
 

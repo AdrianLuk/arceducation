@@ -1,15 +1,17 @@
 .btn-register {
-    @include registration-button;
+    @include button;
 }
-
-.cta {
-    color: $white;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-    background-color: $primary;
-    border-color: $primary;
-
+.overlay {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+.cta-btn {
+    @include button;
     @media screen and (min-width: 768px) {
         padding: 0.5rem 1rem;
         font-size: 1.25rem;
@@ -17,8 +19,16 @@
         border-radius: 0.3rem;
     }
 }
-
-.fa {
-    width: 32px;
-    height: 32px;
+.btn {
+    @include button;
+}
+.nav-previous,
+.nav-next {
+    @include button;
+    padding: 10px;
+    border-radius: 0.3rem;
+    a {
+        color: $white;
+        text-decoration: none;
+    }
 }

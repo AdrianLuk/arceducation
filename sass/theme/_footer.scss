@@ -1,0 +1,13 @@
+.footer-cta {
+    @include background-image-parallax;
+    padding: 10%;
+    text-align: center;
+    color: $white;
+    position: relative;
+    .overlay {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    &-content {
+        z-index: 3;
+    }
+}

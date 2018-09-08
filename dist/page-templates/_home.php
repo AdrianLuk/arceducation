@@ -34,7 +34,7 @@
                         <div class="text-white home-banner-inner text-center">
                             <h1><?= $hero_title; ?></h1>
                             <h2><?= $hero_subheading; ?></h2>
-                            <a href="<?= $hero_cta_button['url']; ?>" class="btn btn-primary btn-lg hero-cta cta"><?= $hero_cta_button['title']; ?></a>
+                            <a href="<?= $hero_cta_button['url']; ?>" class="btn btn-primary btn-lg hero-cta cta-btn"><?= $hero_cta_button['title']; ?></a>
                         </div>
                     </div>
                 </div>

@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-12 col-md-6 d-flex flex-column">
             <div class="contactpage-description">
-                <?php the_field('contact_description'); ?>
+                <p><?php the_field('contact_description'); ?></p>
             </div>
             <?php if(have_rows('contact_social')):?>
             <?php if ( have_rows('contact_info') ) : ?>
@@ -36,7 +36,7 @@
                     $social_icon = get_sub_field('social_icon') ? get_sub_field('social_icon'): '';
                     $social_url = get_sub_field('social_url') ? get_sub_field('social_url'): '';
                 ?>
-                <p><a class="text-dark" href="<?= $social_url; ?>"><span class="mr-2 fa fa-<?= $social_icon; ?> fa-2x text-center"></span><?= $social_url; ?></a></p>
+                <p><a class="text-dark d-flex align-items-center" href="<?= $social_url['link']; ?>"><span class="mr-2 fa fa-<?= $social_icon; ?> fa-2x text-center"></span><?= $social_url['title']; ?></a></p>
                 <?php endwhile; ?>
                 <?php while( have_rows('contact_info') ) : the_row(); 
                     $contact_phone = get_sub_field('phone') ? get_sub_field('phone') : '';
@@ -44,13 +44,14 @@
                     $contact_address = get_sub_field('address') ? get_sub_field('address') : '';
                 ?>
                     <p>
-                    <a class="text-dark" href="mailto:<?= $contact_email ?>"><span class="mr-2 fa fa-envelope fa-2x text-center"></span><?= $contact_email ?></a>
+                    <a class="text-dark d-flex align-items-center" href="mailto:<?= $contact_email ?>"><span class="mr-2 fa fa-envelope fa-2x text-center"></span><?= $contact_email ?></a>
                     </p>
                     <p>
-                    <a class="text-dark" href="tel:<?= $contact_phone ?>"><span class="mr-2 fa fa-phone fa-2x text-center"></span><?= $contact_phone ?></a>
+                    <a class="text-dark d-flex align-items-center" href="tel:<?= $contact_phone ?>"><span class="mr-2 fa fa-phone fa-2x text-center"></span><?= $contact_phone ?></a>
                     </p>
-                    <div class="text-dark">
-                        <span class="mr-2 fa fa-map-marker fa-2x text-center"></span><span><?= $contact_address ?></span>
+                    <div class="text-dark d-flex align-items-center">
+                        <span class="mr-2 fa fa-map-marker fa-2x text-center"></span>
+                        <span><?= $contact_address ?></span>
                     </div>
            
                <?php endwhile; ?>

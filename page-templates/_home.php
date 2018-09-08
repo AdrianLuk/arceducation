@@ -34,7 +34,7 @@
                         <div class="text-white home-banner-inner text-center">
                             <h1><?= $hero_title; ?></h1>
                             <h2><?= $hero_subheading; ?></h2>
-                            <a href="<?= $hero_cta_button['url']; ?>" class="btn btn-primary btn-lg hero-cta cta"><?= $hero_cta_button['title']; ?></a>
+                            <a href="<?= $hero_cta_button['url']; ?>" class="btn btn-primary btn-lg hero-cta cta-btn"><?= $hero_cta_button['title']; ?></a>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,25 @@
         </main>
     </div>
 </div>
+    <?php if (have_rows('footer_cta_section')): ?>
+    
+        <?php while (have_rows('footer_cta_section')) : the_row(); ?>
+            <?php 
+                $section_heading = get_sub_field('section_heading') ? get_sub_field('section_heading') : '';
+                $section_subheading = get_sub_field('section_subheading') ? get_sub_field('section_subheading') : '';
+                $section_background = get_sub_field('section_background') ? get_sub_field('section_background') : '';
+                $section_link = get_sub_field('section_link') ? get_sub_field('section_link') : '';    
+            ?>
+            <div class="footer-cta" style="background-image: url('<?= $section_background; ?>');">
+                <div class="overlay"></div>
+                <div class="footer-cta-content">
+                    <h2 class="footer-cta-heading"><?= $section_heading; ?></h2>
+                    <h3 class="footer-cta-subheading"><?= $section_subheading; ?></h3>
+                    <a href="<?= $section_link['link']; ?>" class="footer-cta-button btn btn-lg"><?= $section_link['title']; ?></a>
+                </div>
+            </div>
+        <?php endwhile ?>
+    <?php endif ?>
     <?php
-
     get_footer();
     ?>
