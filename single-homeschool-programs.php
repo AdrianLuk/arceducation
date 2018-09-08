@@ -31,7 +31,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
                 <div class="overlay"></div>
                     <div class="container">
                         <div class="text-white home-banner-inner text-center">
-                            <h1 class="font-weight-bold"><?php the_title(); ?></h1>
+                            <h2 class="font-weight-bold"><?php the_title(); ?></h2>
                         </div>
                     </div>
                 </div>

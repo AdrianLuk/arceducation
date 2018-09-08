@@ -1,6 +1,6 @@
 {
     "browserSyncOptions": {
-        "proxy": "localhost/arc",
+        "proxy": "arc:8888",
         "notify": false
     },
     "browserSyncWatchFiles": ["./css/*.min.css", "./js/*.min.js", "./**/*.php"],
