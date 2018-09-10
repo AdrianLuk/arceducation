@@ -165,7 +165,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
 			$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
-			$output .= $indent . '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' . $id . $class_names . '>';
+			$output .= $indent . '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' . $id . $class_names . '><a class="nav-link" href="' . $item->url .'">' . $item->title .'</a>';
 
 			// initialize array for holding the $atts for the link item.
 			$atts = array();
@@ -191,11 +191,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			} else {
 				$atts['href'] = ! empty( $item->url ) ? $item->url : '#';
 				// Items in dropdowns use .dropdown-item instead of .nav-link.
-				if ( $depth > 0 ) {
 					$atts['class'] = 'dropdown-item';
-				} else {
-					$atts['class'] = 'nav-link';
-				}
 			}
 
 			// update atts of this item based on any custom linkmod classes.

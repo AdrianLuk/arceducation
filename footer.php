@@ -11,15 +11,21 @@ $the_theme = wp_get_theme();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
+<?php //get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
 <div class="wrapper" id="wrapper-footer">
-
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<div class="container">
+		<?php wp_nav_menu(array(
+			'theme_location'  => 'footer',
+			'menu_class' => 'row justify-content-center list-unstyled'
+		));
+		?>
+	</div>
+	<div class="container">
 
 		<div class="row">
 
-			<div class="col-md-12">
+			<div class="col-md-12 p-0">
 
 				<footer class="site-footer" id="colophon">
 
@@ -27,7 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<small>
 							&copy;<?php echo date("Y"); ?> Arc Education Centre
 							<span class="sep"> | </span>
-							Developed By <a href="http://adrianluk.com">Adrian Luk</a>
+							Developed By <a class="adrian" href="http://adrianluk.com">Adrian Luk</a>
 							</small>
 				
 					</div><!-- .site-info -->

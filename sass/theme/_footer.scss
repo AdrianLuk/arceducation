@@ -20,4 +20,29 @@
         padding-bottom: 1rem;
         letter-spacing: 1px;
     }
+    &-heading {
+        font-size: 1.5rem;
+    }
+    &-subheading {
+        font-size: 1.25rem;
+    }
+}
+
+#wrapper-footer {
+    background: $dark-grey;
+    color: $white;
+    a {
+        color: $white;
+        text-decoration: none;
+        margin: 0 1rem;
+    }
+    .site-info {
+        text-align: center;
+        .adrian {
+            margin: 0;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }

@@ -35,7 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                         <img src="<?= $picture ?>" alt="<?= $name ?>" class="img-fluid">
                     </div>
                 <?php endif ?>
-                    <div class="col-12 col-md-9 text-center">
+                    <div class="col-12 col-md-9 text-center mt-3">
                         <h2 class="staff-name font-weight-bold text-primary"><?= $name ?></h2>
                         <h3 class="h4 staff-title text-primary"><?= $title ?></h3>
                         <?php if($education) : ?>
@@ -50,7 +50,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                         <?php endwhile ?>
                         </ul>
                         <?php endif ?>
-                        <p class="staff-description mt-3"><?= $description ?></p>
+                        <p class="staff-description mt-3 text-justify"><?= $description ?></p>
                     </div>
                 </div>
                 <?php endwhile; ?>
