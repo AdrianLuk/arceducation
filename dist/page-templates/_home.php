@@ -55,7 +55,7 @@
                             <h2 class="offerings-title"><?= $section_name; ?></h2>
                             <p class=" p-3"><?= $section_description; ?></p>
                             <?php if($section_cta): ?>
-                            <a href="<?= $section_cta['url']; ?>" class="cta btn btn-primary"><?= $section_cta['title']; ?></a>
+                            <a href="<?= $section_cta['url']; ?>" class="cta btn btn-primary btn-lg"><?= $section_cta['title']; ?></a>
                             <?php endif ?>
                         </div>
                    
@@ -65,7 +65,25 @@
         </main>
     </div>
 </div>
+    <?php if (have_rows('footer_cta_section')): ?>
+    
+        <?php while (have_rows('footer_cta_section')) : the_row(); ?>
+            <?php 
+                $section_heading = get_sub_field('section_heading') ? get_sub_field('section_heading') : '';
+                $section_subheading = get_sub_field('section_subheading') ? get_sub_field('section_subheading') : '';
+                $section_background = get_sub_field('section_background') ? get_sub_field('section_background') : '';
+                $section_link = get_sub_field('section_link') ? get_sub_field('section_link') : '';    
+            ?>
+            <div class="footer-cta" style="background-image: url('<?= $section_background; ?>');">
+                <div class="overlay"></div>
+                <div class="footer-cta-content container">
+                    <h2 class="footer-cta-heading w-75 mx-auto"><?= $section_heading; ?></h2>
+                    <h3 class="footer-cta-subheading"><?= $section_subheading; ?></h3>
+                    <a href="<?= $section_link['link']; ?>" class="footer-cta-button btn btn-lg"><?= $section_link['title']; ?></a>
+                </div>
+            </div>
+        <?php endwhile ?>
+    <?php endif ?>
     <?php
-
     get_footer();
     ?>

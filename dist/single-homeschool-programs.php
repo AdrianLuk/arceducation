@@ -79,9 +79,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
                         </div>
                     </div>
                 </div>
-                <div class="container">
-						<?php arc_post_nav(); ?>
-                </div>
+                <?php arc_post_nav(); ?>
 				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->

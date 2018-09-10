@@ -20,7 +20,7 @@
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
-        text-shadow: 1px 1px 5px #000;
+        @include text-shadow;
 
         h1 {
             @include title;

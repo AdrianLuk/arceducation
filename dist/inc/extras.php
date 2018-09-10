@@ -90,7 +90,7 @@ if ( ! function_exists ( 'arc_post_nav' ) ) {
 			return;
 		}
 		?>
-				<nav class="container navigation post-navigation">
+				<nav class="container navigation post-navigation mb-3">
 					<h2 class="sr-only"><?php _e( 'Post navigation', 'arc' ); ?></h2>
 					<div class="row nav-links justify-content-between">
 						<?php
