@@ -75,6 +75,7 @@ add_action( 'init', function(){
 class cpt_register {
     public function __construct(){
         $this->cpt_register('Homeschool Program', 'homeschool-programs', 'dashicons-admin-home', array());
+        $this->cpt_register('Program', 'programs', 'dashicons-book', array());
         $this->cpt_register('Camp', 'camps', 'dashicons-palmtree', array());
         $this->cpt_register('Classe', 'classes', 'dashicons-welcome-learn-more', array());
 		$this->cpt_register('Staff', 'staff', 'dashicons-groups', array());
