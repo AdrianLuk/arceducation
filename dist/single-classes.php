@@ -17,6 +17,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
                 
 				<?php while ( have_posts() ) : the_post(); ?>
                     <?php 
+                    $class_availability = get_field('class_availability');
                     $class_picture = get_field('class_picture') ? get_field('class_picture') : ''; 
                     $class_description = get_field('class_description') ? get_field('class_description') : ''; 
                     $class_title = get_field('class_title') ? get_field('class_title') : ''; 
@@ -35,8 +36,14 @@ $container   = get_theme_mod( 'understrap_container_type' );
                     <div class="class-row row">
                         <div class="class-left col-12 col-md-3">
                             <div class="h-100 class-left-inner">
+                                <?php if ($class_picture): ?>
                                 <img class="class-left-img img-fluid" src="<?= $class_picture; ?>" alt="<?php the_title(); echo " " . "picture" ?>">
-                                <a href="<?= $class_registration_link; ?>" class="mt-3 class-left-register-link btn-register btn btn-primary">Register Now</a>
+                                <?php endif ?>
+                                <?php if ($class_availability): ?>
+                                    <a href="<?= $class_registration_link; ?>" class="mt-3 class-left-register-link btn-register btn btn-primary">Register Now</a>
+                                <?php else : ?>
+                                    <a href="javascript: void(0);" class="mt-3 class-left-register-link btn-secondary btn disabled">Registration Closed</a>
+                                <?php endif ?>
                             </div>
                         </div>
                         <div class="class-right col-12 col-md-9">

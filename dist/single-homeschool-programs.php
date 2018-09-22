@@ -17,6 +17,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
                 
 				<?php while ( have_posts() ) : the_post(); ?>
                     <?php 
+                    $homeschool_availability = get_field('homeschool_availability');
                     $homeschool_picture = get_field('homeschool_picture') ? get_field('homeschool_picture') : ''; 
                     $homeschool_description = get_field('homeschool_description') ? get_field('homeschool_description') : ''; 
                     $homeschool_age = get_field('homeschool_age') ? get_field('homeschool_age') : ''; 
@@ -39,8 +40,14 @@ $container   = get_theme_mod( 'understrap_container_type' );
                     <div class="homeschool-row row">
                         <div class="homeschool-left col-12 col-md-3">
                             <div class="h-100 homeschool-left-inner">
+                                <?php if($homeschool_picture): ?>
                                 <img class="homeschool-left-img img-fluid" src="<?= $homeschool_picture; ?>" alt="<?php the_title(); echo " " . "picture" ?>">
+                                <?php endif ?>
+                                <?php if($homeschool_availability): ?>
                                 <a href="<?= $homeschool_registration_link; ?>" class="mt-3 homeschool-left-register-link btn-register btn btn-primary">Register Now</a>
+                                <?php else: ?>
+                                <a href="javascript: void(0);" class="mt-3 homeschool-left-register-link btn-secondary btn disabled">Registration Closed</a>
+                                <?php endif ?>
                             </div>
                         </div>
                         <div class="homeschool-right col-12 col-md-9">

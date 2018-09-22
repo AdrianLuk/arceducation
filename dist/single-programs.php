@@ -17,6 +17,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
                 
 				<?php while ( have_posts() ) : the_post(); ?>
                     <?php 
+                    $program_availability = get_field('program_availability');
                     $program_picture = get_field('program_picture') ? get_field('program_picture') : ''; 
                     $program_description = get_field('program_description') ? get_field('program_description') : ''; 
                     $program_age = get_field('program_age') ? get_field('program_age') : ''; 
@@ -39,8 +40,14 @@ $container   = get_theme_mod( 'understrap_container_type' );
                     <div class="program-row row">
                         <div class="program-left col-12 col-md-3">
                             <div class="h-100 program-left-inner">
+                            <?php if($program_picture): ?>
                                 <img class="program-left-img img-fluid" src="<?= $program_picture; ?>" alt="<?php the_title(); echo " " . "picture" ?>">
+                            <?php endif ?>
+                            <?php if($program_availability): ?>
                                 <a href="<?= $program_registration_link; ?>" class="mt-3 program-left-register-link btn-register btn btn-primary">Register Now</a>
+                            <?php else: ?>
+                                <a href="javascript: void(0);" class="mt-3 program-left-register-link btn-secondary btn disabled">Registration Closed</a>
+                            <?php endif ?>
                             </div>
                         </div>
                         <div class="program-right col-12 col-md-9">
