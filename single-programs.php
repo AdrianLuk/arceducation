@@ -46,7 +46,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
                             <?php if($program_availability): ?>
                                 <a href="<?= $program_registration_link; ?>" class="mt-3 program-left-register-link btn-register btn btn-primary">Register Now</a>
                             <?php else: ?>
-                                <a href="javascript: void(0);" class="mt-3 program-left-register-link btn-secondary btn disabled">Registration Closed</a>
+                                <a href="javascript: void(0);" class="mt-3 program-left-register-link btn-secondary btn disabled" tabindex="-1">Registration Closed</a>
                             <?php endif ?>
                             </div>
                         </div>

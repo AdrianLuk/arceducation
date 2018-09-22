@@ -27,11 +27,11 @@ body {
 }
 .nav-previous,
 .nav-next {
-    @include button;
-    padding: 10px;
-    border-radius: 0.3rem;
     a {
+        @include button;
         color: $white;
         text-decoration: none;
+        padding: 10px;
+        border-radius: 0.3rem;
     }
 }

@@ -32,7 +32,7 @@ jQuery().ready(function($) {
                 $("#instagram-feed ul.instagram-photos").append(
                     '<li class="instagram-item"><a class="instagram-link" href="' +
                         data.data[x].link +
-                        '" target="_blank"><div class="instagram-photo-container"><img class="img-fluid instagram-photo px-0" src="' +
+                        '" target="_blank"><div class="instagram-photo-container"><div class="overlay"></div><img class="img-fluid instagram-photo px-0" src="' +
                         data.data[x].images.standard_resolution.url +
                         '" alt="picture"></div><div class="instagram-view"><div class="fa fa-instagram"></div><p>View on Instagram</p></div></a></li>'
                 ); // data.data[x].images.low_resolution.url - URL of image, 306Ã‘â€¦306

@@ -50,7 +50,6 @@
                     ?>
                     <section style="background-image:url('<?= $section_background; ?>');" class="offerings" id="Home-offerings">
                     <div class="overlay"></div>
-                    
                         <div class="text-white offerings-banner-inner text-center">
                             <h2 class="offerings-title"><?= $section_name; ?></h2>
                             <p class=" p-3"><?= $section_description; ?></p>
@@ -58,7 +57,6 @@
                             <a href="<?= $section_cta['url']; ?>" class="cta btn btn-primary btn-lg text-white"><?= $section_cta['title']; ?></a>
                             <?php endif ?>
                         </div>
-                   
                     </section>
                 <?php endwhile ; ?>
             <?php endif ; ?>

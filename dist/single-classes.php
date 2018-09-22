@@ -34,24 +34,20 @@ $container   = get_theme_mod( 'understrap_container_type' );
                 </div>
                 <div class="class container my-5">
                     <div class="class-row row">
+                        <?php if ($class_picture): ?>
                         <div class="class-left col-12 col-md-3">
                             <div class="h-100 class-left-inner">
-                                <?php if ($class_picture): ?>
+                                
                                 <img class="class-left-img img-fluid" src="<?= $class_picture; ?>" alt="<?php the_title(); echo " " . "picture" ?>">
-                                <?php endif ?>
-                                <?php if ($class_availability): ?>
-                                    <a href="<?= $class_registration_link; ?>" class="mt-3 class-left-register-link btn-register btn btn-primary">Register Now</a>
-                                <?php else : ?>
-                                    <a href="javascript: void(0);" class="mt-3 class-left-register-link btn-secondary btn disabled">Registration Closed</a>
-                                <?php endif ?>
                             </div>
                         </div>
-                        <div class="class-right col-12 col-md-9">
+                        <?php endif ?>
+                        <div class="class-right col-12 col-md-8 offset-md-2">
                             <div class="h-100 class-right-inner d-flex flex-column justify-content-around">
-                                
-                                <div class="class-right-description">
+                                <div class=" py-3 class-right-description">
                                     <?= $class_description; ?>
                                 </div>
+                                <a href="/contact" class="cta btn btn-primary btn-lg text-white">Book Now</a>
                             </div>
                         </div>
                     </div>

@@ -54,7 +54,16 @@
         }
     }
 }
-
+.instagram-item.slick-slide {
+    .overlay {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    &.slick-current {
+        .overlay {
+            background: none;
+        }
+    }
+}
 #instagram-feed .instagram-feed-title {
     color: darken($primary, 20%);
     font-weight: bold;
@@ -115,6 +124,7 @@
     .instagram-view {
     display: block;
     position: absolute;
+    z-index: 2;
     top: 50%;
     left: 50%;
     width: 120px;
