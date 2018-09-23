@@ -1,4 +1,5 @@
-.total-price, .age-group {
+.total-price,
+.age-group {
     color: darken($primary, 30%) !important;
     font-size: 1.5rem;
     vertical-align: middle;
@@ -23,7 +24,7 @@
         @media screen and (min-width: 768px) {
             max-width: 75%;
         }
-        @media screen and (min-width: 1200px){
+        @media screen and (min-width: 1200px) {
             max-width: 40%;
         }
     }

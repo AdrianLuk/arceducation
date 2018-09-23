@@ -1,0 +1,25 @@
+.archive-homeschool-programs,
+.archive-programs,
+.archive-classes {
+    .page-title {
+        margin-bottom: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        color: darken($primary, 20%);
+    }
+    .card-deck {
+        .deck-item {
+            .card {
+                .card-body {
+                    text-align: center;
+                    .card-title {
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
