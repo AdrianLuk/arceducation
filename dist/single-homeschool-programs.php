@@ -55,7 +55,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
                                 <div class="homeschool-right-info">
                                     <div class="row py-3">
                                     <div class="col-12 homeschool-right-date text-center">
-                                        <h2 class="text-uppercase text-primary">Class Start Date</h2>
+                                        <h2 class="text-uppercase text-primary font-weight-bold">Class Start Date</h2>
                                     <p><?= $homeschool_date; ?></p>
                                     </div>
                                 </div>
