@@ -73,6 +73,7 @@
     list-style-type: none;
 }
 #instagram-feed ul.instagram-photos li.instagram-item {
+    width: 9.375rem !important;
     height: 9.375rem;
     overflow: hidden;
 }
@@ -92,7 +93,7 @@
 #instagram-feed ul.instagram-photos li.instagram-item a.instagram-link {
     display: block;
     position: relative;
-    width: 100%;
+    width: 9.375rem;
     height: 9.375rem;
     overflow: hidden;
 }
@@ -102,7 +103,7 @@
     a.instagram-link
     .instagram-photo-container {
     position: relative;
-    width: 100%;
+    width: 9.375rem;
     height: 9.375rem;
     line-height: 9.375rem;
     overflow: hidden;

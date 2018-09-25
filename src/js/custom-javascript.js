@@ -47,20 +47,20 @@ jQuery().ready(function($) {
                 autoplay: true,
                 autoplaySpeed: 5000,
                 centerMode: true,
-                slidesToShow: 5,
+                slidesToShow: 7,
                 slidesToScroll: 1,
                 responsive: [
                     {
                         breakpoint: 1200,
                         settings: {
-                            slidesToShow: 4,
+                            slidesToShow: 5.5,
                             slidesToScroll: 1
                         }
                     },
                     {
                         breakpoint: 1024,
                         settings: {
-                            slidesToShow: 3,
+                            slidesToShow: 4,
                             slidesToScroll: 1
                         }
                     },
@@ -73,6 +73,20 @@ jQuery().ready(function($) {
                     },
                     {
                         breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1.3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 320,
+                        settings: {
+                            slidesToShow: 1.3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 1,
                         settings: {
                             slidesToShow: 1,
                             slidesToScroll: 1
