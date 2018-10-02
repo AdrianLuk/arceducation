@@ -60,7 +60,7 @@
                     </section>
                 <?php endwhile ; ?>
             <?php endif ; ?>
-            <div class="container-fluid p-0">
+            <div class="container p-0">
                 <div id="instagram-feed" class="py-3">
                     <h2 class="instagram-feed-title text-center text-uppercase"><span class="fa fa-instagram"></span> Keep Up With Arc</h2>
                     <ul class="instagram-photos pt-3 pl-0"></ul>
