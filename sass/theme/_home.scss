@@ -71,6 +71,7 @@
 #instagram-feed ul.instagram-photos {
     margin: 0;
     list-style-type: none;
+    max-height: 200px;
 }
 #instagram-feed ul.instagram-photos li.instagram-item {
     width: 9.375rem !important;
@@ -116,6 +117,8 @@
     img.instagram-photo {
     // width: 100%;
     line-height: 9.375rem;
+    min-height: 100%;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 #instagram-feed
@@ -137,6 +140,7 @@
     border-radius: 50%;
     text-align: center;
     opacity: 0;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 #instagram-feed
@@ -169,6 +173,7 @@
     a {
     color: #f0b310;
     font-weight: bold;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 #instagram-feed

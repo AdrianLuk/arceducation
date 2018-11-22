@@ -25,19 +25,20 @@ $container = 'container';
                     ?>
                     <div class="card">
                         <div class="card-header" id="heading_<?= $counter; ?>">
-                        <h5 class="mb-0">
-                            <button class="btn" type="button" data-toggle="collapse" data-target="#faq_<?= $counter; ?>" aria-expanded="true" aria-controls="faq_<?= $counter; ?>">
-                            <?= $question; ?>
-                            </button>
-                        </h5>
+                            <h5 class="mb-0">
+                                <p class="accordion-trigger"  data-toggle="collapse" data-target="#faq_<?= $counter; ?>" aria-expanded="true" aria-controls="faq_<?= $counter; ?>">
+                                <?= $question; ?>
+                                </p>
+                            </h5>
                         </div>
 
                         <div id="faq_<?= $counter; ?>" class="collapse <?php $counter == 1 ? 'show' : ''; ?>" aria-labelledby="heading_<?= $counter; ?>" data-parent="#faq-accordion">
-                        <div class="card-body">
-                            <?= $answer; ?>
-                        </div>
+                            <div class="card-body">
+                                <?= $answer; ?>
+                            </div>
                         </div>
                     </div>
+                    <?php $counter++; ?>
                     <?php endwhile; ?>
                     </div>
                 <?php endif; ?>

@@ -83,7 +83,7 @@
                 <div class="footer-cta-content container">
                     <h2 class="footer-cta-heading mx-auto"><?= $section_heading; ?></h2>
                     <h3 class="footer-cta-subheading"><?= $section_subheading; ?></h3>
-                    <a href="<?= $section_link['link']; ?>" class="footer-cta-button btn-primary btn btn-lg"><?= $section_link['title']; ?></a>
+                    <a href="<?= $section_link['url']; ?>" class="footer-cta-button btn-primary btn btn-lg"><?= $section_link['title']; ?></a>
                 </div>
             </div>
         <?php endwhile ?>
