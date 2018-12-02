@@ -31,7 +31,7 @@ $type = "camps";
                 <header class="page-header">
                     <h1 class="page-title"><?php echo post_type_archive_title( '', false ); ?></h1>
                 </header><!-- .page-header -->
-                <div class="container p-0">
+                <div class="container">
                 <div class="card-deck">
                     <?php while ($query->have_posts()) : $query->the_post(); ?>
                     <div class="deck-item mb-3 col-12 col-md-6 col-lg-4 p-0">
