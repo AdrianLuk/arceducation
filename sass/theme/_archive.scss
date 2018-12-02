@@ -1,7 +1,8 @@
 .archive-homeschool-programs,
 .archive-programs,
 .archive-classes,
-.archive-camps {
+.archive-camps,
+.posts-page {
     width: 100%;
     .page-title {
         margin-bottom: 1.5rem;
@@ -11,14 +12,24 @@
         color: darken($primary, 20%);
     }
     .card-deck {
-        .deck-item {
-            .card {
-                .card-body {
-                    text-align: center;
-                    .card-title {
+        .card {
+            flex: 0 0 30%;
+            img {
+                width: 100%;
+                max-height: 250px;
+            }
+            .card-body {
+                text-align: center;
+                .card-title {
+                    line-height: 1;
+                    a {
+                        font-size: 2rem;
                         text-transform: uppercase;
                         font-weight: bold;
                         color: $primary;
+                        &:hover {
+                            text-decoration: none;
+                        }
                     }
                 }
             }

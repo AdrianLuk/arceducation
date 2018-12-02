@@ -31,13 +31,12 @@ $type = "homeschool-programs";
                 <header class="page-header">
                     <h1 class="page-title"><?php echo post_type_archive_title( '', false ); ?></h1>
                 </header><!-- .page-header -->
-                <div class="container p-0">
+                <div class="container">
                 <div class="card-deck">
                     <?php while ($query->have_posts()) : $query->the_post(); ?>
-                    <div class="deck-item mb-3 col-12 col-md-6 col-lg-4 p-0">
-                    <div class="card">
+                    <div class="card deck-item mb-3">
                         <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail( 'medium', array('class' => 'card-img-top', 'alt' => "{$type} image") ); ?>
+                            <img class="card-img-top" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title();?> picture">
                         </a>
                         <div class="card-body">
                         <h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
@@ -46,7 +45,6 @@ $type = "homeschool-programs";
                         <div class="card-footer p-0">
                         <a href="<?php the_permalink(); ?>" class="btn btn-primary w-100 text-white rounded-0 p-3">Learn More</a>
                         </div>
-                    </div>
                     </div>
                     <?php endwhile ;?>
                 </div>

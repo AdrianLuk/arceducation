@@ -32,9 +32,8 @@ $type = "classes";
                     <h1 class="page-title"><?php echo post_type_archive_title( '', false ); ?></h1>
                 </header><!-- .page-header -->
                 <div class="container">
-                <div class="card-deck">
+                <div class="card-deck mb-3">
                     <?php while ($query->have_posts()) : $query->the_post(); ?>
-                    <div class="deck-item mb-3 col-12 col-md-6 col-lg-4">
                     <div class="card">
                         <a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail( 'medium', array('class' => 'card-img-top', 'alt' => "{$type} image") ); ?>
@@ -46,7 +45,6 @@ $type = "classes";
                         <div class="card-footer p-0">
                         <a href="<?php the_permalink(); ?>" class="btn btn-primary w-100 text-white rounded-0 p-3">Learn More</a>
                         </div>
-                    </div>
                     </div>
                     <?php endwhile ;?>
                 </div>

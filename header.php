@@ -42,7 +42,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary py-0">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container" >
@@ -53,11 +53,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<?php if ( is_front_page() && is_home() ) : ?>
 
-							<a class="navbar-brand mb-0" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+							<a class="navbar-brand mb-0" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><img class="img-fluid mr-3" src="https://www.arceducationcentre.ca/wp-content/uploads/2018/12/arc-logo.png" alt="arc logo"><?php bloginfo( 'name' ); ?></a>
 
 						<?php else : ?>
 
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><img style="max-height: 46px" class="img-fluid mr-3" src="https://www.arceducationcentre.ca/wp-content/uploads/2018/07/ARC-LOGO1-page-001-e1543719927739.jpg" alt="arc logo" ><span class="d-none d-md-inline-block text-uppercase font-weight-bold"><?php bloginfo( 'name' ); ?></span></a>
 
 						<?php endif; ?>
 
