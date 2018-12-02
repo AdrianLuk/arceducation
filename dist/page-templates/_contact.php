@@ -36,7 +36,7 @@
                     $social_icon = get_sub_field('social_icon') ? get_sub_field('social_icon'): '';
                     $social_url = get_sub_field('social_url') ? get_sub_field('social_url'): '';
                 ?>
-                <p><a class="text-dark d-flex align-items-center" href="<?= $social_url['link']; ?>"><span class="mr-2 fa fa-<?= $social_icon; ?> fa-2x text-center"></span><?= $social_url['title']; ?></a></p>
+                <p><a class="text-dark d-flex align-items-center" href="<?= $social_url['url']; ?>"><span class="mr-2 fa fa-<?= $social_icon; ?> fa-2x text-center"></span><span><?= $social_url['title']; ?></span></a></p>
                 <?php endwhile; ?>
                 <?php while( have_rows('contact_info') ) : the_row(); 
                     $contact_phone = get_sub_field('phone') ? get_sub_field('phone') : '';

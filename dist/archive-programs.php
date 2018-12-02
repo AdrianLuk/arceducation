@@ -34,8 +34,7 @@ $type = "programs";
                 <div class="container">
                     <div class="card-deck">
                         <?php while ($query->have_posts()) : $query->the_post(); ?>
-                        <div class="deck-item mb-3 col-12 col-md-6 col-lg-4">
-                        <div class="card">
+                        <div class="card deck-item mb-3">
                             <a href="<?php the_permalink(); ?>">
                                 <?php the_post_thumbnail( 'medium', array('class' => 'card-img-top', 'alt' => "{$type} image") ); ?>
                             </a>
@@ -46,7 +45,6 @@ $type = "programs";
                             <div class="card-footer p-0">
                             <a href="<?php the_permalink(); ?>" class="btn btn-primary w-100 text-white rounded-0 p-3">Learn More</a>
                             </div>
-                        </div>
                         </div>
                         <?php endwhile ;?>
                     </div>
