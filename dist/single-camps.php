@@ -64,7 +64,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
                                         <tr>
                                             <th style="vertical-align: middle;">Age Group</th>
                                             <th style="vertical-align: middle">Program</th>
-                                            <th style="vertical-align: middle">Materials</th>
                                             <th style="vertical-align: middle;" class="total-price" >Total</th>
                                         </tr>
                                     </thead>
@@ -72,7 +71,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
                                         <tr>
                                             <th style="vertical-align: middle" class="age-group"><?= $camp_age ?></th>
                                             <td style="vertical-align: middle">$<?= $camp_program_fee; ?></td>
-                                            <td style="vertical-align: middle">$<?= $camp_material_fee; ?></td>
                                             <th style="vertical-align: middle;" class="total-price" scope="row">$<?= $camp_price; ?></th>
                                         </tr>
                                     </tbody>
